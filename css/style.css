@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-image: url(/img/pipoca2.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover; 
+   width: 100vw;
+   height: 100vh;
+   font-family: 'Poppins', sans-serif;
+   overflow: hidden;
+}
+form{
+ position: fixed;
+ width: 350px;
+ background: rgba(63, 127, 131, 0.815);
+ padding: 20px;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%,-50%);
+ border-radius: 10px;
+ display: flex;
+ flex-direction: column;
+}
+form i{
+    color: rgb(232, 193, 0);
+    font-size: 6em;
+    text-align: center;
+    justify-content: center;
+}
+form h1{
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+ #senha,#login{
+    width: 100%;
+    border-radius: 5px;
+    border-style: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: medium;
+}
+
+#logar{
+    width: 25%;
+    padding: 5px;
+    background: rgb(232, 193, 0);
+    border-style: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#logar:hover{
+    background: rgb(192, 176, 34);
+    color: white;
+}
+
+form label{
+   color: white;
+   transition: 1s;
+   cursor: pointer;
+}
+
+form a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    padding: 5px;
+    font-weight: 400;
+    transition: 1s;
+}
+
+form a:hover, form label:hover{
+    color: black;
+}
+
