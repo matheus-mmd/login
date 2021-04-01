@@ -15,9 +15,12 @@ body{
    font-family: 'Poppins', sans-serif;
    overflow: hidden;
 }
+
+/*formulario*/
+
 form{
  position: fixed;
- width: 350px;
+ min-width: 350px;
  background: rgba(63, 127, 131, 0.815);
  padding: 20px;
  left: 50%;
@@ -39,6 +42,9 @@ form h1{
     margin-bottom: 10px;
     text-transform: uppercase;
 }
+
+/*senha e login*/
+
  #senha,#login{
     width: 100%;
     border-radius: 5px;
@@ -85,3 +91,32 @@ form a:hover, form label:hover{
     color: black;
 }
 
+@media screen and (min-width:1000px){
+    
+    /*formulario*/
+
+    form{
+        width: 70%;
+        height: 80%;
+    }
+
+    form i{
+        font-size: 5em;
+    }
+
+    form h1{
+       font-size: 2em;
+    }
+    
+    /*senha e login*/
+
+    #senha,#login{
+        padding: .4em;
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    #logar{
+        font-size: 1em;
+    }
+}
