@@ -5,118 +5,141 @@
     box-sizing: border-box;
 }
 
-body{
-   background-image: url(/img/pipoca2.jpg);
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover; 
-   width: 100vw;
-   height: 100vh;
-   font-family: 'Poppins', sans-serif;
-   overflow: hidden;
+:root {
+    --font-1: Poppins, sans-serif;
 }
 
-/*formulario*/
 
-form{
- position: fixed;
- min-width: 350px;
- background: rgba(63, 127, 131, 0.815);
- padding: 20px;
- left: 50%;
- top: 50%;
- transform: translate(-50%,-50%);
- border-radius: 10px;
- display: flex;
- flex-direction: column;
-}
-form i{
-    color: rgb(232, 193, 0);
-    font-size: 6em;
-    text-align: center;
-    justify-content: center;
-}
-form h1{
-    text-align: center;
-    color: white;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+/*container*/
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/img/pipoca2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+     
 }
 
-/*senha e login*/
+/*area-de-login*/
 
- #senha,#login{
-    width: 100%;
-    border-radius: 5px;
-    border-style: none;
-    margin-bottom: 10px;
+.area-de-login{
+    width: 80%;
+    background-color: rgba(128, 128, 128, 0.707);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
     padding: 10px;
-    font-size: medium;
 }
 
-#logar{
-    width: 25%;
-    padding: 5px;
-    background: rgb(232, 193, 0);
-    border-style: none;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-right: 10px;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
 
-#logar:hover{
-    background: rgb(192, 176, 34);
-    color: white;
-}
+/*img*/
 
-form label{
-   color: white;
-   transition: 1s;
-   cursor: pointer;
-}
-
-form a{
-    text-decoration: none;
-    color: white;
+.img{
     width: 100%;
-    padding: 5px;
-    font-weight: 400;
-    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
 }
 
-form a:hover, form label:hover{
+.img i{
+    font-size: 4rem;
+    background-color: white;
+    color: #D0322C;
+    border-radius: 100px;
+    padding: .5rem;
+}
+
+.img h1{
+    color: white;
+    font-family: var(--font-1);
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+
+/*usuario*/
+
+.usuario{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.usuario input{
+    padding: 1rem;
+    margin: 1rem;
+    font-weight: 400;
+    font-family: var(--font-1);
+    font-size: 1rem;
+    border-radius: 15px;
+    border-style: none;
+}
+
+.usuario #logar{
+    width: 40%;
+    margin: 0 auto 1rem auto;
+    font-size: 2rem;
+    padding: 15px;
+    box-shadow: 10px 5px 5px black;
+    cursor: pointer;
+    background-color: tomato;
+}
+
+.usuario #logar:hover{
+    color: white;
+    background-color: teal;
+}
+
+
+/*usuario-int*/
+
+.usuario-int{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    text-transform: capitalize;
+    justify-content: space-around;
+    font-family: var(--font-1);
+    font-weight: bolder;
+}
+
+.usuario-int label:hover{
+    color: white;
+}
+
+.usuario-int a{
+    text-decoration: none;
     color: black;
 }
 
-@media screen and (min-width:1000px){
-    
-    /*formulario*/
+.usuario-int a:hover{
+    text-decoration: none;
+    color: white;
+}
+@media screen and (max-width:360px){
 
-    form{
-        width: 70%;
-        height: 80%;
+    /*area-de-login*/
+
+    .area-de-login{
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+     }
+
+     /*img*/
+
+     .img i{
+        font-size: 4rem;
     }
 
-    form i{
-        font-size: 5em;
+    .usuario-int{
+        flex-direction: column;
     }
 
-    form h1{
-       font-size: 2em;
-    }
-    
-    /*senha e login*/
-
-    #senha,#login{
-        padding: .4em;
-        font-size: 1.5em;
-        margin-bottom: 1em;
-    }
-
-    #logar{
-        font-size: 1em;
-    }
 }
